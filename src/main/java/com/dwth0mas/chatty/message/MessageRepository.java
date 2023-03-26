@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface MessageRepository extends JpaRepository<Message, Integer> {
 
-    Optional<Message[]> findByCurrentUserId(String currentUserId, String friendUserId);
+    Optional<Message[]> findByUserIdAndFriendId(String currentUserId, String friendUserId);
 
 }
